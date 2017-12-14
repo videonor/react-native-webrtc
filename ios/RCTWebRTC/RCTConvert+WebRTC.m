@@ -88,7 +88,7 @@
 + (nonnull RTCConfiguration *)RTCConfiguration:(id)json
 {
   RTCConfiguration *config = [[RTCConfiguration alloc] init];
-
+  config.bundlePolicy = RTCBundlePolicyMaxCompat;
   if (!json) {
     return config;
   }
